@@ -5,22 +5,18 @@ const helplines = [
     "number": "999",
     "tags": ["All"]
   },
-  {
-    "title": "Police Helpline Number",
-    "category": "Police",
-    "number": "999",
-    "tags": ["Police", "1438"]
+    {
+    "title": "Brac Helpline",
+    "category": "Brac",
+    "number": "16445",
+    "tags": ["NGO"]
   },
-  {
-    "title": "Fire Service Number",
-    "category": "Fire Service",
-    "number": "999",
-    "tags": ["Fire"]
-  },
+
+
   {
     "title": "Ambulance Service",
     "category": "Ambulance",
-    "number": "1994-999999",
+    "number": "1994",
     "tags": ["Health"]
   },
   {
@@ -35,17 +31,23 @@ const helplines = [
     "number": "106",
     "tags": ["Govt."]
   },
+    {
+    "title": "Fire Service Number",
+    "category": "Fire Service",
+    "number": "999",
+    "tags": ["Fire"]
+  },
+    {
+    "title": "Police Helpline Number",
+    "category": "Police",
+    "number": "999",
+    "tags": ["Police"]
+  },
   {
     "title": "Electricity Helpline",
     "category": "Electricity Outage",
     "number": "16216",
     "tags": ["Electricity"]
-  },
-  {
-    "title": "Brac Helpline",
-    "category": "Brac",
-    "number": "16445",
-    "tags": ["NGO"]
   },
   {
     "title": "Bangladesh Railway Helpline",
@@ -67,3 +69,7 @@ document.querySelector('.coins span').innerText = coins;
 
 let copy = 0;
 document.querySelector('.copy-times span').innerText = copy;
+
+
+let clearBtn = document.querySelector('.clear-history');
+let historyWrap = document.querySelector('.history-wrap');

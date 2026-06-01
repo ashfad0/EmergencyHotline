@@ -108,6 +108,10 @@ header {
             box-sizing: border-box;
             box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
 
+            &:has(.history-wrap:empty) .clear-history{
+                display: none;
+            }
+
         }
     }
 }
@@ -204,6 +208,8 @@ header {
         border-radius: 100px;
         padding: 8px 20px;
         cursor: pointer;
+
+        
     }
 }
 
@@ -216,6 +222,7 @@ header {
         background-color: #fafafa;
         padding: 16px;
         border-radius: 8px;
+
 
         .history-title-num-wrap{
                 display: flex;
