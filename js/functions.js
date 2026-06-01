@@ -37,7 +37,6 @@ function addCard(object) {
                             </button>
                         </div>
                 </div>`;
-    // let newCard = document.createElement(card);
     cardsWrapper.insertAdjacentHTML("beforeend", card);
 
 //     document.querySelector(`.${wrapperClass} .call`).addEventListener("click", function(){
