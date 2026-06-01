@@ -1,19 +1,13 @@
 
 
-// function callAlert(object){
-//  alert(object.number)
-// }
-
 function addCard(object) {
 
     let wrapperClass = object.title.replaceAll(" ", "-").toLowerCase();
-    // console.log(wrapperClass);
-    // wrapperClass = wrapperClass.
 
-  let  card = ` <div class="card">
+    let card = ` <div class="card">
                     <div class="card-head">
                         <img src="./assets/emergency.png" alt="" class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                        <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
                             fill="red">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path
@@ -39,12 +33,8 @@ function addCard(object) {
                 </div>`;
     cardsWrapper.insertAdjacentHTML("beforeend", card);
 
-//     document.querySelector(`.${wrapperClass} .call`).addEventListener("click", function(){
-//  alert(object.number)
-// });
-
-
-let historyCard = `<div class="history ${wrapperClass}">
+    // history ard reation 
+    let historyCard = `<div class="history ${wrapperClass}">
 <div class="history-title-num-wrap">
 <h5 class="history-title">${object.title}</h5>
 <p class="history-number">${object.number}</p>
@@ -53,10 +43,14 @@ let historyCard = `<div class="history ${wrapperClass}">
 <p class="call-time">loading</p>
 </div>`
 
-cardsWrapper.lastElementChild.querySelector('.call').addEventListener("click", function(){
-    document.querySelector('.history-wrap').insertAdjacentHTML("beforeend", historyCard);
-    document.querySelector(`.${wrapperClass} .call-time`).innerText = new Date().toLocaleTimeString();
-    alert(object.number);
- });
-
+    // call click handaller 
+    cardsWrapper.lastElementChild.querySelector('.call').addEventListener("click", function () {
+        if (coins.innerText != 0) {
+            document.querySelector('.history-wrap').insertAdjacentHTML("beforeend", historyCard);
+            document.querySelector(`.${wrapperClass} .call-time`).innerText = new Date().toLocaleTimeString();
+            alert(object.number);
+            coins.innerText = coins.innerText - 20;
+        }
+    }
+    );
 }

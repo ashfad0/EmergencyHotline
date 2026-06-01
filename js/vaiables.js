@@ -5,7 +5,7 @@ const helplines = [
     "number": "999",
     "tags": ["All"]
   },
-    {
+  {
     "title": "Brac Helpline",
     "category": "Brac",
     "number": "16445",
@@ -31,13 +31,13 @@ const helplines = [
     "number": "106",
     "tags": ["Govt."]
   },
-    {
+  {
     "title": "Fire Service Number",
     "category": "Fire Service",
     "number": "999",
     "tags": ["Fire"]
   },
-    {
+  {
     "title": "Police Helpline Number",
     "category": "Police",
     "number": "999",
@@ -58,14 +58,14 @@ const helplines = [
 ]
 
 let cardsWrapper = document.querySelector('.cards-wrapper')
-let cards = document.querySelectorAll('.card')
-// let cardTitle = document.querySelector('.card .card-title').innerText
-// let cardCategory = document.querySelector('.card .card-subtitle').innerText
-// let cardNumber = document.querySelector('.card .number').innerText
-// let cardTag = document.querySelector('.card .card-type').innerText
+let heart = document.querySelector('.heart-icon')
 
-let coins = 500;
-document.querySelector('.coins span').innerText = coins;
+
+let coins = document.querySelector('.coins span');
+coins.innerText = 0;
+let callRate = 20;
+
+let countedCoins = 0;
 
 let copy = 0;
 document.querySelector('.copy-times span').innerText = copy;
