@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 16px;
+}
+
+:root {
+    --green-light: rgba(65, 255, 107, 0.1);
+    --green: #00a63e;
+    --white: #fff;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+section,
+header,
+footer {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 12px;
+}
+
+.hero-container {
+    justify-content: space-between;
+
+    .counters {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        >* {
+            padding: 8px 16px;
+            background: var(--green-light);
+            border-radius: 100px;
+        }
+
+        .copy-times {
+            background: var(--green);
+            color: var(--white);
+        }
+    }
+}
+
+.logo {
+    width: 60px;
+}
+
+/* banner  */
+
+.banner {
+    background: linear-gradient(90.00deg, rgba(1.25, 49.64, 34.61, 1) 0%, rgba(0, 103, 71, 1) 49.99%, rgba(1, 50, 35, 1) 100%);
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: var(--white);
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .banner-logo {
+        width: 60px;
+    }
+}
+
+/* main content  */
+
+.main-content {
+    background-color: var(--green-light);
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    --col-widht: 25%;
+
+    .container {
+        gap: 30px;
+
+        .left-col {
+            width: calc(100% - var(--col-widht));
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .right-col {
+            width: var(--col-widht);
+            background: var(--white);
+            border-radius: 12px;
+            padding: 24px;
+            box-sizing: border-box;
+            box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
+
+        }
+    }
+}
+
+/* card  */
+
+.card {
+    padding: 24px;
+    background-color: var(--white);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+
+
+    .card-head {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .icon {
+            width: 38px;
+        }
+    }
+
+    .card-subtitle {
+        margin-bottom: 12px;
+    }
+
+    .card-num-type-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .card-type {
+        font-size: 13px;
+        background-color: var(--green-light);
+        padding: 6px 18px;
+        width: fit-content;
+        border-radius: 100px;
+        border: 1px solid rgba(0, 0, 0, 0.1)
+    }
+
+    .btns-wrap {
+        display: flex;
+        gap: 12px;
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border-radius: 8px;
+            border: none;
+            width: 50%;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .call {
+            background: var(--green);
+            color: var(--white);
+
+            >* {
+                filter: invert(1)
+            }
+        }
+    }
+}
+
+
+
+.history-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+ p{
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+ }
+
+    .clear-history {
+        background: var(--green);
+        color: var(--white);
+        border: none;
+        border-radius: 100px;
+        padding: 8px 20px;
+        cursor: pointer;
+    }
+}
+
+.history-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .history{
+        background-color: #fafafa;
+        padding: 16px;
+        border-radius: 8px;
+
+        .history-title-num-wrap{
+                display: flex;
+    justify-content: space-between;
+        }
+
+        .call-time{
+            font-size: 12px;
+            margin-top: 8px;
+        }
+    }
+}
